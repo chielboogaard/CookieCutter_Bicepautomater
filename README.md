@@ -1,6 +1,11 @@
 ## This project will acomplish the following:
 
-* nothing yet see todo:
+* basic cookieCutter setup
+
+## How to use:
+* install cookiecutter (see link on the bottom of the page)
+* install python requirements: (see requirements file or run `pip3 -r requirements.txt`)
+* run `cookiecutter https://github.com/chielboogaard/CookieCutter_automater`
 
 
 ## ToDo:
@@ -19,3 +24,6 @@
         * create yaml pipeline
         * create classic pipeline to trigger yaml pipeline?
 * include default bicep templates that could setup your next resource
+
+
+CookieCutter: https://github.com/cookiecutter/cookiecutter
