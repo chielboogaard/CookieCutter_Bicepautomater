@@ -25,5 +25,10 @@
         * create classic pipeline to trigger yaml pipeline?
 * include default bicep templates that could setup your next resource
 
+### nice to haves:
+* running cookiecutter from devops
+
+
+
 
 CookieCutter: https://github.com/cookiecutter/cookiecutter
