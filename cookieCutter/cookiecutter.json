@@ -1,4 +1,11 @@
 {
   "projectName": "the name of the project",
-  "prefix": "prefix for creating your resources"
+  "prefix": "prefix for creating your resources",
+  "environment": [
+    "DEV",
+    "QA",
+    "TEST",
+    "ACC",
+    "PROD"
+  ]
 }
