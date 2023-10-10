@@ -51,3 +51,6 @@ resource _webApp 'Microsoft.Web/sites@2022-03-01' = {
     }
   }
 }
+
+// checkov exceptions
+//checkov:skip=CKV_AZURE_16:Ensure that Register with Azure Active Directory is enabled on App Service

@@ -19,4 +19,5 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: bicepModules/
-          framework: bicep 
+          framework: bicep
+        output: gitlab_sast
