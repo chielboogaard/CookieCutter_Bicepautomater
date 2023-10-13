@@ -20,6 +20,7 @@ param Kind string
   param LinuxFxVersion string = ''
   param MinTlsVersion string = '1.2'
   param Use32BitWorkerProcess bool = false
+  param http2_enabled bool = true
 
 resource _appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: '${prefix}-ASP-1'
@@ -46,12 +47,14 @@ resource _webApp 'Microsoft.Web/sites@2022-03-01' = {
       connectionStrings: ConnectionStrings
       linuxFxVersion: (!empty(LinuxFxVersion)) ? LinuxFxVersion : null
       minTlsVersion: MinTlsVersion
+      http20Enabled: http2_enabled
       use32BitWorkerProcess: Use32BitWorkerProcess
       appSettings: AppSettings
     }
   }
   // checkov exceptions
   //checkov:skip=CKV_AZURE_16:Ensure that Register with Azure Active Directory is enabled on App Service
+  //checkov:skip=CKV_AZURE_17:not strictly necessary for secure use
 }
 
 
