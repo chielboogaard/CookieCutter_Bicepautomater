@@ -7,5 +7,36 @@
     "TEST",
     "ACC",
     "PROD"
-  ]
+  ],
+  "framework": [
+    "webapp",
+    "VM"
+  ],
+  "database": [
+    "mysql",
+    "mssql",
+    "none"
+  ],
+  "modules": [
+    "yes",
+    "no"
+  ],
+  "__prompts__": {
+    "framework": {
+      "__prompt__": "what framework would you like to use?",
+      "webapp": "azure webapp",
+      "vm": "virtual machine"
+    },
+    "database": {
+      "__prompt__": "what database would you like to use?",
+      "mysql": "mysql 8.0 paas",
+      "mssql": "azure microsoft SQL",
+      "none": "no database required"
+    },
+    "modules": {
+      "__prompt__": "Would you like all modules copied to the project?",
+      "yes": "yes, copy all",
+      "no": "no, not needed except for the ones pre-defined"
+    }
+  }
 }
