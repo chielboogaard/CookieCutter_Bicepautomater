@@ -22,5 +22,8 @@ resource _MySQLServer 'Microsoft.DBforMySQL/flexibleServers@2022-01-01' = {
     administratorLogin: AdministratorLogin
     administratorLoginPassword: AdministratorLoginPassword
     createMode: CreateMode
+    backup: {
+      geoRedundantBackup: 'Enabled'
+    }
   }
 }
