@@ -21,5 +21,5 @@ jobs:
         id: checkov
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: bicepModules/
+          directory: cookieCutter/\{\{cookiecutter.projectName\}\}bicepModules/
           framework: bicep
