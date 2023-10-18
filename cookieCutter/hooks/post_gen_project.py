@@ -13,10 +13,10 @@ def main():
     if framework != "":
         get_modules("framework", framework)
     if database != "":
-        get_modules("database", database)
+        if database != "none":
+            get_modules("database", database)
     if modules == "yes":
-        print("yesyes")
-    return
+        copy_all_modules()
 
 
 def get_modules(kind, module):
@@ -27,13 +27,17 @@ def get_modules(kind, module):
         modules.append(line)
     infile.close()
     copy_modules(modules)
-    return
+
+
+def copy_all_modules():
+    bicepModules = os.listdir("bicepModules")
+    for module in bicepModules:
+        shutil.move(f"bicepModules/{module}", "bicep/modules/")
 
 
 def copy_modules(modules):
     for module in modules:
         shutil.move(f"bicepModules/{module}", "bicep/modules/")
-    return
 
 
 def remove_temp_folders():
